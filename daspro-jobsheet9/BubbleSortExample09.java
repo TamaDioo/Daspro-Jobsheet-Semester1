@@ -8,12 +8,12 @@ public class BubbleSortExample09 {
         //Struktur perulangan bersarang.
         for (int i=0; i < intData.length; i++) {
             //Struktur perulangan kedua untuk perbandingan dan penukaran elemen dalam array.
-            for (int j=1; j < intData.length-i; j++) {
-                if (intData[j-1] > intData[j]) {
+            for (int j=i+1; j < intData.length; j++) {
+                if (intData[i] < intData[j]) {
                         //swap elemen
-                        temp = intData[j];
-                        intData[j] = intData[j-1];
-                        intData[j-1] = temp;
+                        temp = intData[i];
+                        intData[i] = intData[j];
+                        intData[j] = temp;
                 }
             }
         }
