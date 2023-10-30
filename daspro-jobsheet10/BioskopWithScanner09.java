@@ -7,9 +7,9 @@ public class BioskopWithScanner09 {
         String nama, next;
         String[][] penonton = new String[4][2];
         int menu;
+        boolean kursiSedia = true;
 
-        //Perulangan while untuk menampilkan menu
-        while (true) {
+        while (kursiSedia) {
             System.out.println("Menu:");
             System.out.println("1. Input data penonton");
             System.out.println("2. Tampilkan daftar penonton");
@@ -18,7 +18,6 @@ public class BioskopWithScanner09 {
             menu = sc.nextInt();
             sc.nextLine();
 
-            //Struktur pemilihan if else if untuk memilih menu
             if (menu == 1) {
                 System.out.print("Masukkan nama: ");
                 nama = sc.nextLine();
@@ -29,17 +28,24 @@ public class BioskopWithScanner09 {
                 sc.nextLine();
 
                 if (baris >= 1 && baris <= 4 && kolom >= 1 && kolom <= 2) {
-                    penonton[baris-1][kolom-1] = nama;
+                    if (penonton[baris-1][kolom-1] == null) {
+                        penonton[baris-1][kolom-1] = nama;
                     System.out.println("Data penonton telah disimpan.");
+                    kursiSedia = false;
                 } else {
-                    System.out.println("Nomor baris atau kolom tidak valid.");
+                    System.out.println("Maaf, kursi sudah terisi.");
                 }
-            } else if (menu == 2) {
+            } else  {
+                System.out.println("Maaf, nomor baris atau kolom kursi tidak tersedia");
+            }
+        }    else if (menu == 2) {
                 System.out.println("Daftar penonton:");
                 for (int i = 0; i < penonton.length; i++) {
                     for (int j = 0; j < penonton[i].length; j++) {
                         if (penonton[i][j] != null) {
                             System.out.printf("%s \t %d \t %d\n", penonton[i][j], i+1, j+1);
+                        } else {
+                            System.out.printf("Baris %d, kolom %d: ***\n", penonton[i][j], i+1, j+1);
                         }
                     }
                 }
