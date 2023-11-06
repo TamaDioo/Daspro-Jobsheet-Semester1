@@ -5,7 +5,7 @@ public class Individu309 {
         System.out.print("Masukkan nilai N: ");
         int N = sc27.nextInt();
 
-         // Memastikan nilai N < 3
+         // Memastikan nilai N minimal 3
          if (N < 3) {
             System.out.println("Nilai N minimal 3!");
             return;
