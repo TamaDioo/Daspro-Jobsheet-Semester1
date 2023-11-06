@@ -6,7 +6,7 @@ public class Individu209 {
         System.out.print("Masukkan nilai N: ");
         int N = sc.nextInt();
 
-         // Memastikan nilai N < 5
+         // Memastikan nilai N minimal 5
          if (N < 5) {
             System.out.println("Nilai N minimal 5!");
             return;
