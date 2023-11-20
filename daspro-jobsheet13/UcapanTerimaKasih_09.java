@@ -18,6 +18,12 @@ public class UcapanTerimaKasih_09 {
     }
 
     public static void main(String[] args) {
-        UcapanTerimaKasih();//memanggil fungsi UcapanTerimaKasih
+        UcapanTerimaKasih();//Memanggil fungsi UcapanTerimaKasih
+        UcapanTambahan("Salam Sehat");//Memanggil fungsi UcapanTambahan
+    }
+
+    //Membuat fungsi UcapanTambahan
+    public static void UcapanTambahan(String ucapan) {
+        System.out.println(ucapan);
     }
 }
