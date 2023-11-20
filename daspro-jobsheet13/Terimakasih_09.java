@@ -7,5 +7,11 @@ public class Terimakasih_09 {
 
     public static void main(String[] args) {
         UcapanTerimaKasih();//Memanggil fungsi UcapanTerimaKasih
+        String ucapan = "Terima Kasih Pak.. Bu.. Semoga Sehat Selalu"; 
+        UcapanTambahan(ucapan);//Memanggil fungsi UcapanTambahan
+    }
+    //Membuat fungsi UcapanTambahan
+    public static void UcapanTambahan(String ucapan) {
+        System.out.println(ucapan);
     }
 }
