@@ -17,6 +17,14 @@ public class Percobaan2 {
         System.out.print("Pangkat: ");
         pangkat = sc.nextInt();
 
-        System.out.println(hitungPangkat(bilangan, pangkat));
+        //Modifikasi kode agar mencetak deret perhitungan pangkat
+        for (int i=0; i<= pangkat; i++){
+            if (i==pangkat){
+                System.out.print("1");
+            } else {
+                System.out.print(bilangan + "x");
+            }
+        }
+        System.out.println(" = " + hitungPangkat(bilangan, pangkat));
     }
 }
