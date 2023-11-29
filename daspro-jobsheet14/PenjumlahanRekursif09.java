@@ -2,11 +2,11 @@ import java.util.Scanner;
 public class PenjumlahanRekursif09 {
 
     //Membuat fungsi rekursif untuk menjumlahkan bilangan 
-    public static int penjumlahanRekursif(int n) {
-        if (n == 1) {
-            return 1;
+    public static int penjumlahanRekursif(int n, int c) {
+        if (n == c) {
+            return n;
         } else {
-            return n + penjumlahanRekursif(n - 1);
+            return n + penjumlahanRekursif(n + 1, c);
         }
     }
 
@@ -25,7 +25,7 @@ public class PenjumlahanRekursif09 {
             }
         }
 
-        //Memanggil fungsi rekursif
-        System.out.print(" = " + penjumlahanRekursif(bil));
+        //Memanggil fungsi rekursif untuk menghitung penjumlahan deret
+        System.out.print(" = " + penjumlahanRekursif(1, bil));
     }
 }
